@@ -1,9 +1,114 @@
+body{
+    background: linear-gradient(black, #283D3B);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
 h1{
-    color: black;
+    color: #197278;
     text-align: center;
+    font-family: monospace;
+    font-size: 52px;
     font-weight: 900;
 }
 
-div{
-    border: 1px solid black;
+#alpha-div{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 100px;
+}
+
+#options{
+    background: #224b4d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 5px solid #59C9A5;
+    border-radius: 15px;
+    padding: 32px;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(16, 25px);
+    border: 5px solid #59C9A5;
+    border-radius: 10px;
+    background: black;
+}
+
+#deco{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+button{
+    background: #09281f;
+    color: cadetblue;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 22px;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 18px;
+}
+
+input[type=range]::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    background: black;
+    border-radius: 8px;
+    width: 100px;
+    height: 15px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: #429e47;
+    margin-top: -3px;
+}
+
+.size{
+    margin: auto;
+    margin-top: 18px;
+    padding: 8px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.cell{
+    border: 1px solid white;
+}
+
+p{
+    color: #CAE2BC;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 28px;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    padding: 80px;
+    margin-left: 12px;
+}
+
+img{
+    padding: 22px;
+    margin-right: 12px;
+}
+
+span{
+    color: greenyellow;
 }

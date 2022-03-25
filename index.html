@@ -9,7 +9,21 @@
 </head>
 <body>
     <h1>ETCH-A-SKETCH</h1>
-    <div id="container"></div>
+    <div id="alpha-div">
+        <div id="options">
+            <button id="color" onclick="setMods(mode[0])">COLOR</button>
+            <button id="rainbow" on click="setMods(mode[1])">RAINBOW MODE</button>
+            <button id="eraser" onclick="erase()">ERASER</button>
+            <button on click="clear()">CLEAR</button>
+            <input id="slider" type="range" value="16" min="1" max="64">
+            <p class="size">16 x 16</p>
+        </div>
+        <div id="container"></div>
+    </div>
+    <div id="deco">
+            <p>"Besides, a new decade is a chance to find oneself at the beginning of things. Oh, life! What a sweet little <span>Etch A Sketch</span> of time you are!" - Author: Sloane Crosley</p>
+        <img src="./feather.png" height="450px" width="450px">
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>
