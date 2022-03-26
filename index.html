@@ -11,12 +11,12 @@
     <h1>ETCH-A-SKETCH</h1>
     <div id="alpha-div">
         <div id="options">
-            <button id="color" onclick="setMods(mode[0])">COLOR</button>
-            <button id="rainbow" on click="setMods(mode[1])">RAINBOW MODE</button>
-            <button id="eraser" onclick="erase()">ERASER</button>
-            <button on click="clear()">CLEAR</button>
-            <input id="slider" type="range" value="16" min="1" max="64">
-            <p class="size">16 x 16</p>
+            <button id="color" onclick="colorMode()">COLOR</button>
+            <button id="rainbow" onclick="rainbowMode()">RAINBOW MODE</button>
+            <button id="eraser" onclick="eraserMode()">ERASER</button>
+            <button id="clear" onclick="clearAll()">CLEAR</button>
+            <input id="slider" type="range" value="16" min="1" max="64" onchange="barValue()">
+            <p id="size">16 x 16</p>
         </div>
         <div id="container"></div>
     </div>
