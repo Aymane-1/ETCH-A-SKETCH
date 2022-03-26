@@ -33,12 +33,14 @@ h1{
 }
 
 #container{
-    display: grid;
-    grid-template-rows: repeat(1, 35px);
-    grid-template-columns: repeat(16, 40px);
+    display: inline-grid;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 1fr);
     border: 5px solid #59C9A5;
     border-radius: 10px;
     background: black;
+    height:550px;
+    width: 600px;
 }
 
 #deco{
@@ -91,7 +93,7 @@ input[type=range]::-webkit-slider-thumb{
 }
 
 .cell{
-    /* border: 1px solid white; */
+     /* border: 1px solid white;  */
 }
 
 p{

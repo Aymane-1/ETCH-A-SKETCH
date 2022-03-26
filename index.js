@@ -11,7 +11,7 @@ const cont = document.getElementById("container");
 function createGrid(output){
     for(let i = 0; i < output * output; i++){
         let box = document.createElement("div");
-        box.innerHTML += '<div class="cell"></div>';   
+        box.classList.add("cell");
         box.addEventListener('mouseover', defineMode);
         cont.appendChild(box);
     }
@@ -43,7 +43,7 @@ function defineMode(){
     
     if(currentMode === modes[0]){
         div.addEventListener('mouseleave', event =>{
-            div.style.backgroundColor = "red";
+            div.style.backgroundColor = "skyblue";
         })
     }else if(currentMode === modes[1]){
         div.addEventListener('mouseleave', event =>{
@@ -59,20 +59,36 @@ function defineMode(){
 
 }
 
+const display = document.getElementById("size");
 
-const display = document.getElementById("size");  
-
-function barValue(){
+function barValue(output){
     display.innerText = output + " x " + output;
-    // deleteGrid(output);
+    deleteGrid()
+    createnewGrid(output);
 }
 
-function deleteGrid(output){
-    for(i = 0; i < output * output ; i++){
-        cont.remove(childs[i])
-        console.log("here")
+function createnewGrid(output){
+    cont.innerHTML = "";
+    cont.style.setProperty(
+        "grid-template-columns",
+        `repeat(${output}, 2fr)`);
+    
+    cont.style.setProperty(
+        "grid-template-rows",
+        `repeat(${output}, 2fr)`);
+    
+    for(let i = 0; i < output * output; i++){
+        let box = document.createElement("div");
+        box.classList.add("cell")
+        box.addEventListener('mouseover', defineMode);
+        cont.appendChild(box);
     }
-    createGrid(output);
+    console.log(childs)
 }
 
+function deleteGrid(){
+    for(i = 0; i < cont.children.length; i++)
+        cont.removeChild(cont.children[i]);
+    }
+    
 createGrid(output);
