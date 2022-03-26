@@ -43,7 +43,7 @@ function defineMode(){
     
     if(currentMode === modes[0]){
         div.addEventListener('mouseleave', event =>{
-            div.style.backgroundColor = "skyblue";
+            div.style.backgroundColor = "green";
         })
     }else if(currentMode === modes[1]){
         div.addEventListener('mouseleave', event =>{
@@ -63,7 +63,6 @@ const display = document.getElementById("size");
 
 function barValue(output){
     display.innerText = output + " x " + output;
-    deleteGrid()
     createnewGrid(output);
 }
 
@@ -71,11 +70,11 @@ function createnewGrid(output){
     cont.innerHTML = "";
     cont.style.setProperty(
         "grid-template-columns",
-        `repeat(${output}, 2fr)`);
+        `repeat(${output}, 1fr)`);
     
     cont.style.setProperty(
         "grid-template-rows",
-        `repeat(${output}, 2fr)`);
+        `repeat(${output}, 1fr)`);
     
     for(let i = 0; i < output * output; i++){
         let box = document.createElement("div");
@@ -83,12 +82,6 @@ function createnewGrid(output){
         box.addEventListener('mouseover', defineMode);
         cont.appendChild(box);
     }
-    console.log(childs)
 }
-
-function deleteGrid(){
-    for(i = 0; i < cont.children.length; i++)
-        cont.removeChild(cont.children[i]);
-    }
     
 createGrid(output);
