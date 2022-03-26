@@ -1,16 +1,17 @@
 let color = "white";
-const modes = ["color", "rainbow", "eraser"];
 let currentMode;
-let DEFAULT_SIZE = 16;
-const x = DEFAULT_SIZE;
-const y = DEFAULT_SIZE;
+const output = document.getElementById("slider").value;
+const modes = ["color", "rainbow", "eraser"];
+const x = output;
+const y = output;
+
 
 const cont = document.getElementById("container");
 
-function createGrid(DEFAULT_SIZE){
-    for(let i = 0; i < DEFAULT_SIZE * DEFAULT_SIZE; i++){
+function createGrid(output){
+    for(let i = 0; i < output * output; i++){
         let box = document.createElement("div");
-        box.innerHTML += '<div id="cell" height: 25px; width: 25px"></div>';   
+        box.innerHTML += '<div class="cell"></div>';   
         box.addEventListener('mouseover', defineMode);
         cont.appendChild(box);
     }
@@ -58,17 +59,20 @@ function defineMode(){
 
 }
 
+
+const display = document.getElementById("size");  
+
 function barValue(){
-    let output = document.getElementById("slider").value;
-    deleteGrid(output);
+    display.innerText = output + " x " + output;
+    // deleteGrid(output);
+}
+
+function deleteGrid(output){
+    for(i = 0; i < output * output ; i++){
+        cont.remove(childs[i])
+        console.log("here")
+    }
     createGrid(output);
 }
 
-function deleteGrid(){
-    for(i = 0; i < DEFAULT_SIZE * DEFAULT_SIZE ; i++){
-        cont.remove(childs[i]);
-    }
-    console.log(cont)
-}
-
-createGrid(DEFAULT_SIZE);
+createGrid(output);
