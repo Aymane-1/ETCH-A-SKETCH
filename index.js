@@ -44,11 +44,8 @@ function defineMode(){
     const div = this;
     
     if(currentMode === modes[0]){
-        colorPicker.addEventListener('input', event =>{
-            color = colorPicker.value;
-        })
         div.addEventListener('mouseleave', event =>{
-            div.style.backgroundColor = color;
+            div.style.backgroundColor = colorPicker.value;
         })
     }else if(currentMode === modes[1]){
         div.addEventListener('mouseleave', event =>{
@@ -61,7 +58,7 @@ function defineMode(){
         })
     }else
         div.style.backgroundColor = "white";
-
+    
 }
 
 const display = document.getElementById("size");
