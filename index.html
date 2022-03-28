@@ -11,12 +11,14 @@
     <h1>ETCH-A-SKETCH</h1>
     <div id="alpha-div">
         <div id="options">
-            <button id="color" onclick="colorMode()">COLOR</button>
+            <button id="color" onclick="colorMode()">COLOR :
+                <input type="color" id="palette" value="#FFFFFF">
+            </button>
             <button id="rainbow" onclick="rainbowMode()">RAINBOW MODE</button>
             <button id="eraser" onclick="eraserMode()">ERASER</button>
             <button id="clear" onclick="clearAll()">CLEAR</button>
-            <input id="slider" type="range" value="35" min="1" max="64" onchange="barValue(value)">
-            <p id="size">35 x 35</p>
+            <input id="slider" type="range" value="26" min="1" max="64" onchange="barValue(value)">
+            <p id="size">26 x 26</p>
         </div>
         <div id="container"></div>
     </div>

@@ -38,12 +38,17 @@ function clearAll(){
     }
 }
 
+const colorPicker = document.getElementById("palette");
+
 function defineMode(){
     const div = this;
     
     if(currentMode === modes[0]){
+        colorPicker.addEventListener('input', event =>{
+            color = colorPicker.value;
+        })
         div.addEventListener('mouseleave', event =>{
-            div.style.backgroundColor = "green";
+            div.style.backgroundColor = color;
         })
     }else if(currentMode === modes[1]){
         div.addEventListener('mouseleave', event =>{
