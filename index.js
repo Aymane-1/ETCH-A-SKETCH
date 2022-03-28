@@ -34,7 +34,7 @@ const childs = cont.childNodes;
 
 function clearAll(){
     for(let i = 0;i < childs.length;i++){
-        childs[i].style.cssText = "background-color: black";
+        childs[i].style.cssText = "background-color: darkgray";
     }
 }
 
@@ -54,10 +54,10 @@ function defineMode(){
         })
     }else if(currentMode === modes[2]){
         div.addEventListener('mouseleave', event =>{
-            div.style.backgroundColor = "black";
+            div.style.backgroundColor = "darkgray";
         })
     }else
-        div.style.backgroundColor = "white";
+        div.style.backgroundColor = "black";
     
 }
 
