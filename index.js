@@ -5,7 +5,6 @@ const modes = ["color", "rainbow", "eraser"];
 const x = output;
 const y = output;
 
-
 const cont = document.getElementById("container");
 
 function createGrid(output){

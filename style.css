@@ -3,6 +3,7 @@ body{
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     width: 100%;
@@ -17,8 +18,11 @@ h1{
 }
 
 header{
-    background-color: aquamarine;
-    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bcffbf;
+    width: 100%;
     border: 8px solid beige;
     border-radius: 10px;
     margin: 12px;
@@ -35,21 +39,23 @@ header{
     background: #224b4d;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between; 
     border: 5px solid #59C9A5;
     border-radius: 15px;
     padding: 32px;
-    width: 20%;
+    width: 15%; 
+    height: 120%;
 }
 
 #container{
-    display: inline-grid;
+    display: grid;
     grid-template-rows: repeat(26, 1fr);
     grid-template-columns: repeat(26, 1fr);
     border: 15px solid black;
     border-radius: 10px;
     background: darkgray;
-    width: 55%;
+    width: 40%;
+    height: 130%;
 }
 
 #deco{
@@ -57,6 +63,7 @@ header{
     align-items: center;
     border-radius: 10px;
     width: 100%;
+    margin-top: 150px;
 }
 
 button{
@@ -64,23 +71,25 @@ button{
     color: cadetblue;
     font-family: monospace;
     font-weight: 900;
-    font-size: 22px;
+    font-size: 32px;
     border-radius: 10px;
     padding: 18px;
-    margin: 18px;
+    margin: 22px;
 }
 
 input[type=range]{
     -webkit-appearance: none;
     background-color: black;
     border-radius: 10px;
-    margin-top: 18px;
+    margin-top: 48px;
 }
 
 input[type=color]{
     -webkit-appearance: none;
     background-color: greenyellow;
     border-radius: 5px;
+    width: 30%;
+    height: 100%;
 }
 
 input[type=range]::-webkit-slider-runnable-track{
@@ -101,11 +110,11 @@ input[type=range]::-webkit-slider-thumb{
 }
 
 #size{
-    margin: auto;
-    margin-top: 18px;
+    margin-top: -5px;
     padding: 8px;
-    font-size: 27px;
+    font-size: 40px;
     font-weight: 900;
+    text-align: center;
 }
 
 div.cell{
@@ -116,7 +125,7 @@ p{
     color: #CAE2BC;
     font-family: monospace;
     font-style: italic;
-    font-size: 28px;
+    font-size: 42px;
     word-spacing: 4px;
     letter-spacing: 2px;
     padding: 80px;
