@@ -6,7 +6,6 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    width: 100%;
 }
 
 h1{
@@ -43,8 +42,7 @@ header{
     border: 5px solid #59C9A5;
     border-radius: 15px;
     padding: 32px;
-    width: 15%; 
-    height: 120%;
+    width: 20%; 
 }
 
 #container{
@@ -54,8 +52,7 @@ header{
     border: 15px solid black;
     border-radius: 10px;
     background: darkgray;
-    width: 40%;
-    height: 130%;
+    width: 50%;
 }
 
 #deco{
@@ -89,7 +86,7 @@ input[type=color]{
     background-color: greenyellow;
     border-radius: 5px;
     width: 30%;
-    height: 100%;
+    height: 80%;
 }
 
 input[type=range]::-webkit-slider-runnable-track{
@@ -110,7 +107,7 @@ input[type=range]::-webkit-slider-thumb{
 }
 
 #size{
-    margin-top: -5px;
+    margin-top: 30px;
     padding: 8px;
     font-size: 40px;
     font-weight: 900;
